@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class KitapMethod {
+	
+	
 	static Scanner scan = new Scanner(System.in);
 	static int kitapNo = 1000;
 
-	public static void menu(List<Kitap> liste) {//
+	public static void menu(List<Kitap> liste) { //
 		System.out.println("========= KİTAP PROGRAMI =============\n1: Kitap ekle\n2: Numara ile kitap sil\n3: "
 				+ "Tum kitaplari listele\n4: Bitir");
 
@@ -56,40 +58,43 @@ public class KitapMethod {
 		menu(liste);
 	}
 
+
+	
 	public static void kitaplarEkle(List<Kitap> liste) {
-		Kitap kitap1 = new Kitap(++kitapNo, "sefiller", "victor hugo", 1890, 100);
-		Kitap kitap2 = new Kitap(++kitapNo, "serenad", "falan filan", 1999, 220);
-		Kitap kitap3 = new Kitap(++kitapNo, "insan ne ile yasar", "victor hugo", 2000, 150);
-		Kitap kitap4 = new Kitap(++kitapNo, "korler", "benim kitabım", 2010, 130);
-		Kitap kitap5 = new Kitap(++kitapNo, "ebik gabık", "kudret narı", 2011, 90);
+		Kitap kitap1 = new Kitap(++kitapNo, "Sefiller", "Victor Hugo", 1890, 100.0);
+		Kitap kitap2 = new Kitap(++kitapNo, "Serenad", "Zulfu Livaneli", 1999, 220.0);
+		Kitap kitap3 = new Kitap(++kitapNo, "Insan Ne ile Yasar", "Victor Hugo", 2000, 150.0);
+		Kitap kitap4 = new Kitap(++kitapNo, "Korler", "Benim Kitabım", 2010, 130.0);
+		Kitap kitap5 = new Kitap(++kitapNo, "Calikusu", "Resat Nuri Guntekin", 2011, 90.0);
 
 		liste.add(kitap1);
-		liste.add(kitap2);
+		liste.add(kitap2); 
 		liste.add(kitap3);
 		liste.add(kitap4);
 		liste.add(kitap5);
 	}
 
 	private static void kitapEkle(List<Kitap> liste) {
+		
 		System.out.println("Kitap ismi giriniz : ");
 		scan.nextLine();// dummy --> kukla Bos scan obj
 		String kitapAdi = scan.nextLine();
 		// scan.nextLine();//dummy --> kukla Bos scan obj
-		System.out.println("Kitabin yazar  ismi giriniz : ");
-
+		System.out.println("Kitabin yazar ismini giriniz : ");
 		String yazarAdi = scan.nextLine();
 		System.out.println("yayin yilini giriniz : ");
 		int yayinyili = scan.nextInt();
 		System.out.println("fiyatini giriniz : ");
 		double fiyat = scan.nextDouble();
-		Kitap kitap = new Kitap(++kitapNo, kitapAdi, yazarAdi, yayinyili, fiyat);// kitap obj create edildi
+		
+		Kitap kitap = new Kitap(++kitapNo, kitapAdi, yazarAdi, yayinyili, fiyat);// kitap obj create edildi.
 		liste.add(kitap);
-		System.out.println(kitap.toString() + " eklendi  :) ");
+		System.out.println(kitap.toString() + " eklendi  :) " + "\n");
 		menu(liste);
 	}
 
 	private static void bitir() {
-		System.out.println("yine bekleriz....");
+		System.out.println("Yine bekleriz...");
 	}
 
 }
