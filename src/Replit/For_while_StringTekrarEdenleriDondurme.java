@@ -15,12 +15,23 @@ public class For_while_StringTekrarEdenleriDondurme {
 
 		String str = "Javaisalsoeasy";
 
-		for (int i = 0; i < str.charAt(i); i++) {
+		String c = "";
 
-			
+		for (int i = 0; i < str.length(); i++) {
+
+			if (str.indexOf(str.substring(i, i + 1)) != str.lastIndexOf(str.substring(i, i + 1)) & !c.contains(str.substring(i, i + 1))) {  // a a s a s a s sadece if i calistirmis oluyoruz
+
+//				if (!c.contains(str.substring(i, i + 1))) {
+
+					c += str.substring(i, i + 1) + " "; 
+					
+//				}
+
+			}
+
 		}
-		
-			System.out.println(str);
+
+		System.out.println(c);
 
 	}
 
