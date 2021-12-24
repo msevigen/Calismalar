@@ -20,9 +20,10 @@ public class For_while2 {
 		for (int i = num; i >= 2; i--) {
 			
 			c*=i;
+			
 			System.out.print(i+"*");
 		}
-		System.out.print("1=" + c);
+			System.out.print("1=" + c);
 		
 	}
 
